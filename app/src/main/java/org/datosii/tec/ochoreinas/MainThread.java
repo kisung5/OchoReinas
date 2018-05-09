@@ -27,11 +27,25 @@ public class MainThread extends Thread {
 
             try {
                 canvas = this.surfaceHolder.lockCanvas();
+                synchronized (surfaceHolder){
+                    this.mainView.update();
+                    this.mainView.draw(canvas);
+                }
 
-                
 
             } catch (Exception e) {
 
+            }
+
+            finally {
+                if (canvas!=null) {
+                    try {
+                        surfaceHolder.unlockCanvasAndPost(canvas);
+
+                    } catch (Exception e){
+                        e.printStackTrace();
+                    }
+                }
             }
         }
     }
