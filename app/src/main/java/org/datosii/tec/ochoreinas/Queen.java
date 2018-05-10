@@ -8,18 +8,20 @@ public class Queen {
     private Bitmap image;
     private int x,y;
 
-    public Queen (Bitmap bmp) {
+    public Queen (Bitmap bmp , int x , int y) {
         image = bmp;
-        x = 100;
-        y = 100;
+        this.x = x;
+        this.y = y;
     }
 
     public void draw(Canvas canvas) {
 
-        canvas.drawBitmap(image,100,100,null);
+        canvas.drawBitmap(image, x, y,null);
     }
 
-    public void update(){
-        y++;
+    public void update(int x, int y){
+
+        this.x = x;
+        this.y = y;
     }
 }

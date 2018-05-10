@@ -1,5 +1,18 @@
 package org.datosii.tec.ochoreinas;
 
+/*
+    Posiciones de las reinas en todo el tablero,
+    {{[10,10],[140,10],[270,10],[410,10],[540,10],[680,10],[740,10],[950,10]},
+     {[10,180],[140,180],[270,180],
+     {[10,350],
+     {[10,520],
+     {[10,680],
+     {[10,850],
+     {[10,1010],
+     {[10,1180],
+
+*/
+
 public class Queens {
 	final int N = 8;
 	 
